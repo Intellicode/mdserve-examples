@@ -19,7 +19,7 @@ jobs:
 
       - name: Install mdserve
         run:
-          curl https://github.com/Intellicode/mdserve/releases/download/v0.4.0/mdserve-linux-amd64
+          curl -L https://github.com/Intellicode/mdserve/releases/download/v0.4.0/mdserve-linux-amd64
           -o /usr/local/bin/mdserve && chmod +x /usr/local/bin/mdserve
 
       - name: Setup Pages
