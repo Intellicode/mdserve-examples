@@ -19,7 +19,7 @@ jobs:
 
       - name: Install mdserve
         run:
-          curl -L https://github.com/Intellicode/mdserve/releases/download/v0.4.1/mdserve-linux-amd64
+          curl -L https://github.com/Intellicode/mdserve/releases/download/v0.5.0/mdserve-linux-amd64
           -o /usr/local/bin/mdserve && chmod +x /usr/local/bin/mdserve
 
       - name: Setup Pages
@@ -27,7 +27,7 @@ jobs:
 
       - name: Build with mdserve
         run: |
-          mdserve export ./content  ./out --template ./template.html
+          mdserve export ./content  ./out --template ./template.html --config config.yaml
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
